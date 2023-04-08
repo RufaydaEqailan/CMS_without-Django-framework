@@ -1,0 +1,22 @@
+CARTS
+CreatedAt: ISODate(),
+Products:[],
+Status: abandoned / paid / active,
+AbandonedDate: ISODate(),
+PaidDate:ISODate(),
+Price:,
+Discount:,
+PaymentMethod:
+FUNCTIONS:
+main_menu = {
+            # A cart can be updated by the admin
+            'm': modify_cart,
+            # Ta bort hela collection
+            'c': cleanup_carts,
+            # Sök enligt status "abandoned" / "paid" / "pending"
+            's':show_carts_by_status,
+            # Sätt carts med rätt status="abandoned" / "paid" enligt datum
+            'o':set_old_carts,
+            # Hitta carts utifrån deras värden i fältena (med validering av datum,
+            # price och payment method)
+            'v': search_by_value}
