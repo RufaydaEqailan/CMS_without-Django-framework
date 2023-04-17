@@ -1,6 +1,6 @@
 import pymongo
 from pymongo import MongoClient
-import configration
+import configuration
 import modify_carts
 from bson import ObjectId
 import datetime
@@ -9,7 +9,7 @@ from time import sleep
 
 from pymongo import DESCENDING, GEO2D
 
-my_collection=configration.getDBconnection("carts")
+my_collection=configuration.getDBconnection("carts")
 
 def show__carts_operation():
     """ Main  Cart Operations"""

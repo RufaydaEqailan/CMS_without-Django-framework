@@ -1,13 +1,13 @@
 import pymongo
 from pymongo import MongoClient
-import configration
+import configuration
 import re
 import datetime
 from bson import ObjectId
 
 
-my_collection=configration.getDBconnection("carts")
-my_collection_products=configration.getDBconnection("product")
+my_collection=configuration.getDBconnection("carts")
+my_collection_products=configuration.getDBconnection("product")
 
 def modify_master_category(cart_id):
     """Modify selected cart based on : Price , Discount"""

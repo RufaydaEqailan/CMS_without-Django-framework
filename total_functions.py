@@ -1,6 +1,6 @@
 import pymongo
 from pymongo import MongoClient
-import configration
+import configuration
 import modify_carts
 import manage__users
 from bson import ObjectId
@@ -11,8 +11,8 @@ from geopy.exc import GeocoderTimedOut
 from pymongo import DESCENDING, GEO2D
 import pdb
 
-my_collection_carts=configration.getDBconnection("carts")
-my_collection_user=configration.getDBconnection("users")
+my_collection_carts=configuration.getDBconnection("carts")
+my_collection_user=configuration.getDBconnection("users")
 
 def show_total_options():
     """MY Statistic LIST"""

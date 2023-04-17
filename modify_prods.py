@@ -1,8 +1,8 @@
 import pymongo
 from pymongo import MongoClient
-import configration
+import configuration
 
-my_collection=configration.getDBconnection("product")
+my_collection=configuration.getDBconnection("product")
 
 def modify_master_category(prod_id):
     """modify_master_category"""

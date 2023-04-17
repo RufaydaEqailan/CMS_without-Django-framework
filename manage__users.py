@@ -1,6 +1,6 @@
 import pymongo
 from pymongo import MongoClient
-import configration
+import configuration
 import pprint
 import modify_users
 from bson import ObjectId
@@ -8,7 +8,7 @@ import datetime
 import re
 import getpass
 
-my_collection=configration.getDBconnection("users")
+my_collection=configuration.getDBconnection("users")
 
 class Users():
     def __init__(self,users_name,users_email,users_password,users_status,users_online,users_carts,users_payment_methods,users_regiterd_at,users_credit_card ):

@@ -1,10 +1,10 @@
 import pymongo
 from pymongo import MongoClient
-import configration
+import configuration
 import re
 import datetime
 
-my_collection=configration.getDBconnection("users")
+my_collection=configuration.getDBconnection("users")
 
 def modify_master_category(user_id):
     """modify_master_category"""

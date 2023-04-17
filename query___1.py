@@ -1,12 +1,12 @@
 import pymongo
 from pymongo import MongoClient
-import configration
+import configuration
 import pprint
 
 printer=pprint.PrettyPrinter()
 
 def find_10_Men_product(): 
-    product_collection=configration.getDBconnection("product")
+    product_collection=configuration.getDBconnection("product")
     products=product_collection.find({"gender" : "Men"}).limit(10)
     
     for prod in products:
@@ -15,21 +15,21 @@ def find_10_Men_product():
 
 
 def find_10_vinter_women_product():
-    product_collection=configration.getDBconnection("product")
+    product_collection=configuration.getDBconnection("product")
     products=product_collection.find({"gender" : "Women", "season" : "Winter"}).limit(10)
 
     for prod in products:
         printer.pprint(prod)
 
 def find_10_orderby_year():
-    product_collection=configration.getDBconnection("product")
+    product_collection=configuration.getDBconnection("product")
     products=product_collection.find().limit(10).sort("year")
 
     for prod in products:
         printer.pprint(prod)
 
 def find_10_index_subcategori():
-    product_collection=configration.getDBconnection("product")
+    product_collection=configuration.getDBconnection("product")
     product_collection.create_index("subCategory")
     products=product_collection.find({"subCategory" : "Topwear"}).limit(10)
 
@@ -37,7 +37,7 @@ def find_10_index_subcategori():
         printer.pprint(prod)
 
 def find_10_link_http():
-    product_collection=configration.getDBconnection("product")
+    product_collection=configuration.getDBconnection("product")
     products=product_collection.find({}).limit(10)
 
     for prod in products:

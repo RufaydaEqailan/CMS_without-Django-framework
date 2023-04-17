@@ -1,12 +1,12 @@
 import pymongo
 from pymongo import MongoClient
-import configration
+import configuration
 import pprint
 import modify_prods
 from bson import ObjectId
 
 
-my_collection=configration.getDBconnection("product")
+my_collection=configuration.getDBconnection("product")
 
 class Product():
     def __init__(self,gender,masterCategory,subCategory,articleType,baseColour,season,year,usage,productDisplayName,price ):
